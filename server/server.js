@@ -1,34 +1,43 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const apiRoutes = require('./apiRoutes');
-const authRoutes = require('./routes/auth');
-const userRoutes = require('./routes/user');
-const postsRoutes = require('./routes/posts');
-const messagesRoutes = require('./routes/messages');
+const db = require('./db');
 
 const app = express();
 
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // Routes
 app.use('/api', apiRoutes);
-app.use('/api/auth', authRoutes);
-app.use('/api/user', userRoutes);
-app.use('/api/posts', postsRoutes);
-app.use('/api/messages', messagesRoutes);
 
 // Default route
 app.get('/', (req, res) => {
   res.send('Social Network API');
 });
 
-// Error handling middleware
+// 404 Error handling for unknown routes
+app.use((req, res, next) => {
+  res.status(404).json({
+    message: 'Route not found'
+  });
+});
+
+// General error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).json({ message: 'Something went wrong!' });
+  res.status(500).json({
+    message: 'Internal server error',
+    error: process.env.NODE_ENV === 'development' ? err.message : undefined
+  });
 });
 
 const PORT = 3000;
