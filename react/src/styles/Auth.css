@@ -1,0 +1,30 @@
+.vk-auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e7e8ec;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+}
+
+.vk-auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.vk-auth-title {
+  color: #0077ff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.vk-form-group {
+  margin-bottom: 15px;
+}
+
+.vk-auth-links {
+  margin-top: 20px;
+  text-align: center;
+}

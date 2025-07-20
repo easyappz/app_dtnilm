@@ -1,0 +1,73 @@
+.vk-post-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.vk-post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.vk-post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.vk-post-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.vk-post-author {
+  font-weight: bold;
+  color: #2a5885;
+  font-size: 14px;
+}
+
+.vk-post-date {
+  color: #939393;
+  font-size: 12px;
+}
+
+.vk-post-content {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.vk-post-image-container {
+  margin-top: 10px;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.vk-post-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.vk-post-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-top: 1px solid #e7e8ec;
+  padding-top: 8px;
+}
+
+.vk-post-action {
+  color: #818c99;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.vk-post-action:hover {
+  color: #5181b8;
+}

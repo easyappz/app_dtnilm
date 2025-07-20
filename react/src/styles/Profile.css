@@ -1,0 +1,107 @@
+.vk-profile-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #e7e8ec;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  min-height: 100vh;
+}
+
+.vk-sidebar-left {
+  width: 160px;
+  margin-right: 15px;
+}
+
+.vk-sidebar-right {
+  width: 250px;
+  margin-left: 15px;
+}
+
+.vk-profile-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.vk-sidebar-item {
+  padding: 8px 10px;
+  color: #2a5885;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.vk-sidebar-item:hover {
+  background-color: #f0f2f5;
+}
+
+.vk-profile-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.vk-profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.vk-profile-info {
+  flex: 1;
+}
+
+.vk-profile-name {
+  margin: 0 0 5px;
+  font-size: 20px;
+  color: #2a5885;
+}
+
+.vk-profile-status {
+  color: #5181b8;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.vk-profile-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #656565;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.vk-post-input {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+  min-height: 80px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.vk-post-input:focus {
+  outline: none;
+}
+
+.vk-post-submit {
+  background-color: #5181b8;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin-left: auto;
+}
+
+.vk-post-submit:hover {
+  background-color: #4570a5;
+}
